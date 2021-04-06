@@ -18,7 +18,7 @@ export class DataService {
 
   getTodos(): Observable<Todo[] /* | HttpError */> {
     console.log('Obteniendo TODOS del server');
-    return this.http.get<Todo[]>(`${this.endpoint}/todosasdsd`)
+    return this.http.get<Todo[]>(`${this.endpoint}/todos`)
       .pipe(
         catchError(err => this.handleHttpError(err))
       );
